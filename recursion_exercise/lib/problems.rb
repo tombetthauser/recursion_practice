@@ -48,13 +48,9 @@ end
 # lucas_number(9)   # =>    76
 
 def lucas_number(n)
-  if n == 0
-    return 2
-  elsif n == 1
-    return 1
-  else
+    return 2 if n == 0
+    return 1 if n == 1
     lucas_number(n-1) + lucas_number(n-2)
-  end
 end
 
 # ~4min?(very rusty)
