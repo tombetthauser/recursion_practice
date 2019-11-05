@@ -13,12 +13,8 @@
 # pow(4, 3) # => 64
 
 def pow(base, exponent)
-
   return 1 if exponent < 1
-  return base if exponent < 2
-
   base * pow(base, (exponent - 1))
-
 end
 
 # ~3min(rusty)
