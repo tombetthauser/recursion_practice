@@ -14,7 +14,22 @@
 
 def pow(base, exponent)
 
+  return 1 if exponent < 1
+  return base if exponent < 2
+
+  base * pow(base, (exponent - 1))
+
 end
+
+# ~3min(rusty)
+
+
+
+
+
+
+
+
 
 
 # Write a method, lucas_number(n), that takes in a number.
