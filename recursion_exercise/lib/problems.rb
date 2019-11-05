@@ -11,6 +11,7 @@
 # pow(2, 5) # => 32
 # pow(3, 4) # => 81
 # pow(4, 3) # => 64
+
 def pow(base, exponent)
 
 end
