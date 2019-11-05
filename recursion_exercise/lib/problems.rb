@@ -87,6 +87,15 @@ end
 # ~1min(rusty)
 
 
+
+
+
+
+
+
+
+
+
 # Write a method, reverse_string(str), that takes in a string.
 # The method should return the string with it's characters in reverse order.
 #
@@ -99,8 +108,12 @@ end
 # reverse_string("internet")    # => "tenretni"
 # reverse_string("friends")     # => "sdneirf"
 def reverse_string(str)
-
+  return str if str.length < 2
+  str[-1] + reverse_string(str[0...-1])
 end
+
+#~1.25min(rusty)
+
 
 
 # A 1-dimensional array is also known as a flattened array.
