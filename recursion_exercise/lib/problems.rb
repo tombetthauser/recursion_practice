@@ -56,6 +56,17 @@ end
 # ~4min?(very rusty)
 
 
+
+
+
+
+
+
+
+
+
+
+
 # Write a method, sum_array(array), that takes in an array of numbers.
 # The method should return the total sum of the elements.
 # 
@@ -67,9 +78,13 @@ end
 # sum_array([5])            # => 5
 # sum_array([5, 2])         # => 7
 # sum_array([4, 10, -1, 2]) # => 15
-def sum_array(array)
 
+def sum_array(array)
+  return 0 if array.count < 1
+  array.pop + sum_array(array)
 end
+
+# ~1min(rusty)
 
 
 # Write a method, reverse_string(str), that takes in a string.
