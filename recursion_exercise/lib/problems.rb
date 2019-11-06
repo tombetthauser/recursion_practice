@@ -107,6 +107,7 @@ end
 # reverse_string("c")           # => "c"
 # reverse_string("internet")    # => "tenretni"
 # reverse_string("friends")     # => "sdneirf"
+
 def reverse_string(str)
   return str if str.empty?
   str[-1] + reverse_string(str[0...-1])
@@ -144,6 +145,10 @@ end
 #     1-dimensional array: ['some data']
 #     2-dimensional array: [['some data']]
 #     3-dimensional array: [[['some data']]]
-def flatten(data)
 
+def flatten(data)
+  return [data] unless data.is_a?(Array)
+  data.inject([]) { |acc, ele| acc += flatten(ele) }
 end
+
+# timed out after ~7min(rusty), ~1.5min
